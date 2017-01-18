@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<meta charset="utf-8" />
     <title>CSS/HTML Workshop with Drivy</title>
+	<link rel="stylesheet" href="style.css" />
   </head>
   <body>
+  <div id="maForm">
+  <!-- <img src="drivy.jpg" /> -->
+  <center>
     <div id="car">
       <input class="model" type="text" placeholder="Car model"/>
       <input class="price-by-day" type="number" placeholder="Price by day"/>
@@ -13,9 +18,13 @@
       <input class="begin" type="date" placeholder="Rental begin date"/>
       <input class="end" type="date" placeholder="Rental end date"/>
       <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+      <label id = "chekbox label">
+	  <input class="option" type="checkbox" placeholder="Deductible option"/>
+	  Deductible option
+	  </label>
     </div>
     <button id="compute">Compute</button>
+	</div>
     <div id="actors"></div>
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
@@ -29,5 +38,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
+	</center>
   </body>
 </html>
+
